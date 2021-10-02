@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Carousel, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { listTopProducts } from "../actions/productActions";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import Message from "./Message";
 
@@ -19,7 +19,7 @@ const ProductCarousel = () => {
   return loading ? (
     <Loader />
   ) : error ? (
-    <Message variant="danger">{error}</Message> 
+    <Message variant="danger">{error}</Message>
   ) : (
     <Carousel pause="hover" className="bg-dark">
       {products.map((product) => (
